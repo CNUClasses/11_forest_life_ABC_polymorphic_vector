@@ -12,42 +12,13 @@ Forrest::Forrest(void)
 {
 }
 
-
-//Forrest::~Forrest(void)
-//{
-//}
-//the following code demos 
-////go thru all the trees and apply a season 
-//void Forrest::doSeason(season mySeason){
-//	for(std::vector<TreeDecid>::iterator it = myTrees.begin(); it != myTrees.end(); ++it) {
-//     it->liveThruSeason(mySeason);
-//}
-//}
-//void Forrest::live(void)
-//{
-//	TreeDecid myTreeDecid;
-//	int year = 0;
-//	do
-//	{
-//		//add 1 tree every year, this 
-//		//really should be determined by the trees
-//		//themselves, which means there needs to be some 
-//		//way to notify forrest of birth of a new tree
-//		myTrees.push_back(myTreeDecid);
-//		
-//		//myTrees.push_back(new TreeConif);
-//
-//		doSeason(spring);
-//		doSeason(summer);
-//		doSeason(fall);
-//		doSeason(winter);
-//		std::cout<<"Year ="<<year++<<'\n';
-//		Sleep( SLEEP_TIME );
-//	} while (true);
-//}
-
 Forrest::~Forrest(void)
 {
+	//for syntax, neat and simple, alternative to below
+	//auto deduces the type
+//	for(auto& p: myTrees)
+//		delete p;
+	
 	//dont forget to delete what the iterator points to before the vecor goes out of scope
 	for(std::vector<Tree*>::iterator it = myTrees.begin(); it != myTrees.end(); ++it) {
 		delete *it;

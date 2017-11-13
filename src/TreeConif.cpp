@@ -15,6 +15,7 @@ void TreeConif::setHealth(season aSeason){
 TreeConif::~TreeConif(void)
 {
 }
+
 void TreeConif::growLeaves(){
 	std::cout<<"Growing PINE Leaves :^)\n";
 }

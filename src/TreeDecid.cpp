@@ -8,10 +8,11 @@ void TreeDecid::growLeaves(){
 	//grow leaves 
 	for (int i = 0; i < DECID_GROW_LEAVES; i++)
 	{
-		myLeafVector.push_back(myLeafDecid);
+		myLeafVector.push_back(std::unique_ptr<Leaf>(new LeafDecid()));
 	}
 	std::cout<<"Growing DECIDUOUS Leaves :^)\n";
 }
+
 
 void TreeDecid::looseLeaves(){
 	myLeafVector.clear();

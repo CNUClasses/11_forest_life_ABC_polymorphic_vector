@@ -13,7 +13,6 @@ class TreeDecid :
 	public Tree
 {
 private:
-	std::vector<LeafDecid> myLeafVector;
 	virtual void growLeaves();
 	virtual void looseLeaves();
 

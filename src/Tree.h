@@ -1,21 +1,21 @@
 #pragma once
-
+#include <vector>
+#include <memory>
+#include "Leaf.h"
 #include "Global.h"
 
 class Tree
 {
 private:
-	//plain virtual
-	//virtual void setHealth(season aSeason);
-	//virtual void growLeaves();
-	//virtual void looseLeaves();
-
 	//pure virtual functions
 	//MUST be implemented in derived classes
 	//makes this class abstract, so you CANNOT instantiate
 	virtual void growLeaves()=0;
 	virtual void looseLeaves()=0;
 protected:
+	//where the leaves go
+	std::vector<std::unique_ptr<Leaf>> myLeafVector;
+
 	//this is protected because derived classes
 	//may want to call base class implementation
 	virtual void setHealth(season aSeason);
