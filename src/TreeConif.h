@@ -9,10 +9,7 @@ const int PINE_GROW_NEEDLES		= 5;
 class TreeConif :
 	public Tree
 {
-private:
-	int		myGrowRate;
-	health	myHealth;
-	int		myAge;
+protected:
 
 	//a factor of age and season must 
 	//be implemented in derived classes

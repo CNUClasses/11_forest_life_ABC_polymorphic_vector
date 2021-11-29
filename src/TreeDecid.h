@@ -12,11 +12,11 @@ const int DECID_GROW_LEAVES	= 5;
 class TreeDecid :
 	public Tree
 {
-private:
+protected:
 	virtual void growLeaves();
 	virtual void looseLeaves();
 
-protected:
+
 	//this is protected because derived classes
 	//may want to call base class implementation
 	virtual void setHealth(season aSeason);

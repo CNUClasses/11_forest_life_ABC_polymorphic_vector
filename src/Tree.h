@@ -6,13 +6,13 @@
 
 class Tree
 {
-private:
+protected:
 	//pure virtual functions
 	//MUST be implemented in derived classes
 	//makes this class abstract, so you CANNOT instantiate
 	virtual void growLeaves()=0;
 	virtual void looseLeaves()=0;
-protected:
+
 	//where the leaves go
 	std::vector<std::unique_ptr<Leaf>> myLeafVector;
 
