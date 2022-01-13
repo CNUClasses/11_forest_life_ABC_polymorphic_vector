@@ -30,7 +30,7 @@ public:
 	virtual void liveThruSeason(season Season);
 
 	//tree starts at 0 years in great health, season varies
-	Tree(int GrowRate, health Health ,int Age, season Season = spring);
+	Tree(int GrowRate, health Health ,int Age=0, season Season = spring);
 	virtual ~Tree(void);
 };
 
